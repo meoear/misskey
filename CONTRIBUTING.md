@@ -7,15 +7,11 @@ We're glad you're interested in contributing Misskey! In this document you will 
 > The accuracy of machine translation into Japanese is not high, so it will be easier for us to understand if you write it in the original language.
 > It will also allow the reader to use the translation tool of their preference if necessary.
 
-## Roadmap
-See [ROADMAP.md](./ROADMAP.md)
-
 ## Issues
 Before creating an issue, please check the following:
 - To avoid duplication, please search for similar issues before creating a new issue.
 - Do not use Issues to ask questions or troubleshooting.
 	- Issues should only be used to feature requests, suggestions, and bug tracking.
-	- Please ask questions or troubleshooting in the [Misskey Forum](https://forum.misskey.io/) or [Discord](https://discord.gg/Wp8gVStHW3).
 
 > **Warning**
 > Do not close issues that are about to be resolved. It should remain open until a commit that actually resolves it is merged.
@@ -29,10 +25,10 @@ PRs that do not have a clear set of do's and don'ts tend to be bloated and diffi
 Also, when you start implementation, assign yourself to the Issue (if you cannot do it yourself, ask another member to assign you). By expressing your intention to work the Issue, you can prevent conflicts in the work.
 
 ## Well-known branches
-- **`master`** branch is tracking the latest release and used for production purposes.
+- **`main`** branch is tracking the latest release and used for production purposes.
 - **`develop`** branch is where we work for the next release.
 	- When you create a PR, basically target it to this branch.
-- **`l10n_develop`** branch is reserved for localization management.
+
 
 ## Creating a PR
 Thank you for your PR! Before creating a PR, please check the following:
@@ -77,26 +73,16 @@ An actual domain will be assigned so you can test the federation.
 
 ## Release
 ### Release Instructions
-1. Commit version changes in the `develop` branch ([package.json](https://github.com/misskey-dev/misskey/blob/develop/package.json))
+1. Commit version changes in the `develop` branch ([package.json](https://github.com/meoear/misskey/blob/develop/package.json))
 2. Create a release PR.
-	- Into `master` from `develop` branch.
-	- The title must be in the format `Release: x.y.z`.
+	- Into `main` from `develop` branch.
+	- The title must be in the format `Release: vx.y.z`.
 		- `x.y.z` is the new version you are trying to release.
 3. Deploy and perform a simple QA check. Also verify that the tests passed.
 4. Merge it.
-5. Create a [release of GitHub](https://github.com/misskey-dev/misskey/releases)
-	- The target branch must be `master`
+5. Create a [release of GitHub](https://github.com/meoear/misskey/releases)
+	- The target branch must be `main`
 	- The tag name must be the version
-
-## Localization (l10n)
-Misskey uses [Crowdin](https://crowdin.com/project/misskey) for localization management.
-You can improve our translations with your Crowdin account.
-Your changes in Crowdin are automatically submitted as a PR (with the title "New Crowdin translations") to the repository.
-The owner [@syuilo](https://github.com/syuilo) merges the PR into the develop branch before the next release.
-
-If your language is not listed in Crowdin, please open an issue.
-
-![Crowdin](https://d322cqt584bo4o.cloudfront.net/misskey/localized.svg)
 
 ## Development
 During development, it is useful to use the `npm run dev` command.
@@ -174,7 +160,7 @@ vue-routerとの最大の違いは、niraxは複数のルーターが存在す�
 Just execute `yarn` to fix it.
 
 ### INSERTするときにはsaveではなくinsertを使用する
-#6441
+https://github.com/misskey-dev/misskey/issues/6441
 
 ### placeholder
 SQLをクエリビルダで組み立てる際、使用するプレースホルダは重複してはならない
