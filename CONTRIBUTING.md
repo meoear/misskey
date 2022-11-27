@@ -26,7 +26,7 @@ Also, when you start implementation, assign yourself to the Issue (if you cannot
 
 ## Well-known branches
 - **`main`** branch is tracking the latest release and used for production purposes.
-- **`develop`** branch is where we work for the next release.
+- **`developed`** branch is where we work for the next release.
 	- When you create a PR, basically target it to this branch.
 
 
@@ -73,9 +73,9 @@ An actual domain will be assigned so you can test the federation.
 
 ## Release
 ### Release Instructions
-1. Commit version changes in the `develop` branch ([package.json](https://github.com/meoear/misskey/blob/develop/package.json))
+1. Commit version changes in the `developed` branch ([package.json](https://github.com/meoear/misskey/blob/developed/package.json))
 2. Create a release PR.
-	- Into `main` from `develop` branch.
+	- Into `main` from `developed` branch.
 	- The title must be in the format `Release: vx.y.z`.
 		- `x.y.z` is the new version you are trying to release.
 3. Deploy and perform a simple QA check. Also verify that the tests passed.
@@ -160,7 +160,7 @@ vue-routerとの最大の違いは、niraxは複数のルーターが存在す�
 Just execute `yarn` to fix it.
 
 ### INSERTするときにはsaveではなくinsertを使用する
-https://github.com/misskey-dev/misskey/issues/6441
+[#6441](https://github.com/misskey-dev/misskey/issues/6441)
 
 ### placeholder
 SQLをクエリビルダで組み立てる際、使用するプレースホルダは重複してはならない
